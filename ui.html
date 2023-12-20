@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Color Tint Generator</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 12px;
+      padding: 16px;
+    }
+
+    h2 {
+      margin-top: 24px;
+    }
+
+    label {
+      display: block;
+      margin-top: 12px;
+    }
+
+    input[type="color"] {
+      width: 100%;
+      height: 32px;
+      padding: 0;
+      border: none;
+      outline: none;
+    }
+
+    input[type="text"],
+    input[type="number"] {
+      width: 100%;
+      height: 32px;
+      padding: 0 8px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      outline: none;
+    }
+
+    input[type="radio"] {
+      margin-right: 4px;
+    }
+
+    button {
+      display: block;
+      width: 100%;
+      height: 32px;
+      margin-top: 24px;
+      padding: 0;
+      border: none;
+      border-radius: 4px;
+      outline: none;
+      background-color: #ddd;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #ccc;
+    }
+
+    </style </head><body><form id="tintForm"><h2>Color Information</h2><label for="colorInput">Color:</label><input id="colorInput" type="color"><label for="colorName">Color Name:</label><input id="colorName" type="text"><label for="numTints">Number of Tints:</label><input id="numTints" type="number"><h2>Frame Information</h2><label for="circleSize">Circle Size:</label><input id="circleSize" type="number"><label for="circleSpacing">Circle Spacing:</label><input id="circleSpacing" type="number"><label>Frame Orientation:</label><input type="radio" id="horizontal" name="orientation" value="horizontal" checked><label for="horizontal">Horizontal</label><input type="radio" id="vertical" name="orientation" value="vertical"><label for="vertical">Vertical</label><button type="button" id="generateButton">Generate Tints</button><button type="button" id="cancelButton">Cancel</button></form><script>document.getElementById('generateButton').onclick = () => {
+        const message = {
+          type: 'generate-tints',
+          color: document.getElementById('colorInput').value,
+          colorName: document.getElementById('colorName').value,
+          numTints: parseInt(document.getElementById('numTints').value, 10),
+          circleSize: parseInt(document.getElementById('circleSize').value, 10),
+          circleSpacing: parseInt(document.getElementById('circleSpacing').value, 10),
+          orientation: document.querySelector('input[name="orientation"]:checked').value
+        }
+
+          ;
+
+        parent.postMessage({
+          pluginMessage: message
+        }
+
+          , '*');
+      }
+
+        ;
+
+      document.getElementById('cancelButton').onclick = () => {
+        parent.postMessage({
+          pluginMessage: {
+            type: 'cancel'
+          }
+        }
+
+          , '*');
+      }
+
+        ;
+    </script></body></html>
