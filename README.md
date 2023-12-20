@@ -1,40 +1,37 @@
-Below are the steps to get your plugin running. You can also find instructions at:
+Certainly! Below is an explainer text suitable for the README file of your Figma plugin, "Color Tint Generator". This text provides an overview of the plugin's functionality, how to use it, and other relevant information for users.
 
-  https://www.figma.com/plugin-docs/plugin-quickstart-guide/
+---
 
-This plugin template uses Typescript and NPM, two standard tools in creating JavaScript applications.
+# Color Tint Generator for Figma
 
-First, download Node.js which comes with NPM. This will allow you to install TypeScript and other
-libraries. You can find the download link here:
+## Overview
+The Color Tint Generator is a Figma plugin designed to enhance the color design workflow. This plugin allows users to quickly generate a series of tint variations from a base color and visualize them in their Figma projects. It's an invaluable tool for designers who want to experiment with different shades of a color and need to create harmonious color palettes efficiently.
 
-  https://nodejs.org/en/download/
+## Features
+- **Color Tint Generation:** Input a base color and specify the number of tints you want to generate. The plugin creates lighter versions of the base color, providing a smooth gradient of tints.
+- **Customizable Circle Layout:** Visualize the generated tints in a layout of circles, with customizable size and spacing.
+- **Flexible Orientation:** Choose between a horizontal or vertical layout for the tint circles.
+- **Interactive UI:** A user-friendly interface that allows easy input of color values, tint count, and layout preferences.
 
-Next, install TypeScript using the command:
+## How to Use
+1. **Install the Plugin:** Add the Color Tint Generator to your Figma workspace.
+2. **Launch the Plugin:** Access the plugin through the Figma menu.
+3. **Input Color Information:**
+   - **Color:** Choose the base color using the color picker or input the hex code.
+   - **Color Name:** Optionally give a name to your base color.
+   - **Number of Tints:** Specify how many tints you want to generate from the base color.
+4. **Set Frame Information:**
+   - **Circle Size:** Determine the size of the circles displaying the tints.
+   - **Circle Spacing:** Choose the spacing between the circles.
+   - **Orientation:** Select either horizontal or vertical layout for the tint display.
+5. **Generate Tints:** Click on 'Generate Tints' to create and view the tint circles on your canvas.
+6. **Cancel:** If you need to start over or adjust settings, use the 'Cancel' button to reset.
 
-  npm install -g typescript
+## Use Cases
+- **Color Palette Creation:** Ideal for designers crafting color palettes for UI/UX, branding, and illustration projects.
+- **Visualizing Color Variations:** Quickly see how different shades of a color can work together in a design.
+- **Educational Tool:** A great way for beginners to understand color theory and the concept of tints in a practical setting.
 
-Finally, in the directory of your plugin, get the latest type definitions for the plugin API by running:
-
-  npm install --save-dev @figma/plugin-typings
-
-If you are familiar with JavaScript, TypeScript will look very familiar. In fact, valid JavaScript code
-is already valid Typescript code.
-
-TypeScript adds type annotations to variables. This allows code editors such as Visual Studio Code
-to provide information about the Figma API while you are writing code, as well as help catch bugs
-you previously didn't notice.
-
-For more information, visit https://www.typescriptlang.org/
-
-Using TypeScript requires a compiler to convert TypeScript (code.ts) into JavaScript (code.js)
-for the browser to run.
-
-We recommend writing TypeScript code using Visual Studio code:
-
-1. Download Visual Studio Code if you haven't already: https://code.visualstudio.com/.
-2. Open this directory in Visual Studio Code.
-3. Compile TypeScript to JavaScript: Run the "Terminal > Run Build Task..." menu item,
-    then select "npm: watch". You will have to do this again every time
-    you reopen Visual Studio Code.
-
-That's it! Visual Studio Code will regenerate the JavaScript file every time you save.
+## Technical Information
+- **Built with:** The plugin is developed using TypeScript and leverages Figma's API for seamless integration.
+- **Compatibility:** Compatible with the latest version of Figma.
