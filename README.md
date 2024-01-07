@@ -1,6 +1,3 @@
-Certainly! Below is an explainer text suitable for the README file of your Figma plugin, "Color Tint Generator". This text provides an overview of the plugin's functionality, how to use it, and other relevant information for users.
-
----
 
 # Color Tint Generator for Figma
 
